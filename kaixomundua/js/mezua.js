@@ -82,19 +82,56 @@ function berrikuspena() {
 }
 
 function liburuMenua() {
-  var menua = prompt(
-    "1.Liburua Gehitu \n 2.Liburua Ezabatu \n 3.Liburu lista ikusi \n 4.irten"
-  );
-  menua = parseInt(menua);
-  var liburuak = new Array();
-  var irten = true;
+  var liburuak = []; 
+  var irten = false; 
 
-  while (irten) {
+  while (!irten) {
+    var menua = prompt(
+      "1. Liburua Gehitu \n 2. Liburu lista ikusi \n 3.Liburua ezabatu \n 4. Irten"
+    );
+    menua = parseInt(menua);
+
     switch (menua) {
       case 1:
         var izena = prompt("Sartu liburuaren izena: ");
-        var titulua = prompt("Sartu liburuareb titulua: ");
-        var irakurri = prompt("Sartu irakurri duzun edo ez: ");
+        var titulua = prompt("Sartu liburuaren titulua: ");
+        var irakurri = prompt("Sartu irakurri duzun edo ez (bai/ez): ").toLowerCase();
+        
+        if (irakurri === "bai") {
+          irakurri = true;
+        } else if (irakurri === "ez") {
+          irakurri = false;
+        } else {
+          alert("Mesedez sartu bai edo ez");
+          break; 
+        }
+
+        liburuak.push({ izena: izena, titulua: titulua, irakurri: irakurri });
+        break; 
+
+      case 2:
+        if (liburuak.length > 0) {
+          var lista = liburuak.map(liburua => 
+            `Izena: ${liburua.izena}, Titulua: ${liburua.titulua}, Irakurrita: ${liburua.irakurri ? 'Bai' : 'Ez'}`
+          ).join('\n');
+          alert(lista);
+        } else {
+          alert("Ez dago libururik.");
+        }
+        break; 
+      
+      case 3:
+        liburuaren_izena = prompt("Sartu liburuaren izena ezabatzeko: ");
+        liburuak = liburuak.filter(liburua => liburua.izena !== liburuaren_izena);
+        alert("Liburua ezabatu da, baldin eta zerrendan aurkitzen bazen.");
+        break;
+      case 4:
+        irten = true; 
+        break; 
+
+      default:
+        alert("Aukera ezagutzen ez den aukera.");
+        break; 
     }
   }
 }
