@@ -8,7 +8,7 @@ class Estudiante {
 
 Estudiante.prototype.saludar = () => console.log(`Hola, me llamo ${nombre} y tengo ${edad} años.`);
 
-Estudiante.prototype.listarAsignaturas = () => console.log(`Mis asignaturas son: ${this.asignaturas.join(', ')}`);
+Estudiante.prototype.listarAsignaturas = () => console.log(`Mis asignaturas son: ${asignaturas.join(', ')}`);
 
 let estudiante1 = new Estudiante('Ana', 20, 'Matemáticas', 'Historia', 'Literatura');
   

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="parrafoa">If you click on the "Hide" button, I will disappear.</p>
+    <img id="irudia" src="1.gif" />
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // $("#hide").click(function(){
+        //   $("p").slideUp();
+        //});
+        $("#hide").click(() => $("p").slideUp());
+      });
+      $("#show").click(function () {
+        $("#parrafoa").slideDown();
+      });
+      $("#irudia").hover(
+        function () {
+          $("#parrafoa").hide();
+          $("#irudia").attr("src", "2.gif");
+        },
+        function () {
+          $("#parrafoa").show();
+          $("#irudia").attr("src", "1.gif");
+        }
+      );
+    </script>
+  </body>
+</html>
