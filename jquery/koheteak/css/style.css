@@ -1,0 +1,10 @@
+
+body {
+    background-image: url("/jquery/koheteak/img/spacestars.jpg");
+}
+
+#rocket{
+    position: relative;
+    left: 50%;
+    top: 0;
+}
