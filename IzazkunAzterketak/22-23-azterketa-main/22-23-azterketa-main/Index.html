@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>gastronomic</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen"/>    
+    <style type="text/css">
+        body {
+            /*margin-left: 30px;*/
+            font-family: sans-serif;
+            /*text-align: center;*/
+        }
+
+        h4 {
+            margin: 0;
+        }
+        .laranja {
+            color: #fd7e14;
+        }
+        .testua {
+            color: #7e5f04;
+            font-size: large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    .estiloForm {
+            background-color: white;
+            border: solid 1px #fd7e14;
+            /*margin-left: 10px;*/
+            /*width: 300px;*/
+            /*width: 800px;*/
+            padding: 10px;
+        }
+       .botoia {
+           background-color: #fd7e14;
+       }
+       .irudia {
+           margin: 10px;
+       }
+       #erosiForm {
+           padding: 10px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+        <img src="goia.png" class="img-fluid">
+        <img id="irudia" src="cookpad.png">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 class="laranja">Bidaiatu munduan zehar sukaldatzen</h3>
+        <p class="testua">Italiako sukaldaritza pizza baino askoz gehiago da! Ikusi zer prestatzen ari diren munduan zehar......</p>
+        <br>
+        <br>
+        <h3 class="laranja">Zein herrialdeko errezetak ikusi nahi dituzu? </h3>
+        <div class="estiloForm" id="estiloForm">
+            <table>
+                <tr>
+                    <td>
+                        <select id="herrialde" name="herrialde">
+                            <option value="">Aukeratu</option>
+                            <option value="Italia">Italia</option>
+                            <option value="Mejico">Méjico</option>
+                            <option value="India">India</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="erakutsi" class="botoia">Errezetak Erakutsi</button>
+                        <button id='berria' class='botoia'>Errezeta berria</button>
+                        <div id="publikatuForm">
+                            <form class="needs-validation" novalidate>
+                                <div class="form-group">
+                                    <label for="inputIzena">Izena</label>
+                                    <input type="text" class="form-control" id="inputIzena" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAzalpena">Azalpena</label>
+                                    <input type="text" class="form-control" id="inputAzalpena" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputIrudia">Irudia</label>
+                                    <input type="text" class="form-control" id="inputIrudia" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Baieztatu</button>
+                            </form>
+                        </div>
+                        <div id="irudiak"></div>                    
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/scripta.js"></script>
+</body>
+</html>
+

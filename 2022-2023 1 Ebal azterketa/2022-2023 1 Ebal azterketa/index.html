@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookpad</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/cookpad.js"></script>
+</head>
+<body>
+    <div class="w-100 text-center">
+        <img src="img/goia.png" class="img-fluid" />
+        <img src="img/cookpad.png" class="img-fluid" id="cookpad-img" />
+        <h3 class="pt-5">Bidaiatu munduan zehar sukaldatzen</h3>
+        <p class="font-weight-bold">
+            Italiako sukaldaritza pizza baina askoz gehiago da! Ikusi zer prestatzen ari diren munduan zehar......
+        </p>
+        <h3 class="pt-5">Zein herrialdeko errezetak ikusi nahi dituzu?</h3>
+    </div>
+    <div class="border border-warning p-3 m-3">
+        <select id="herrialde" class="ml-3">
+            <option value="" selected>Aukeratu</option>
+            <option value="italia">Italia</option>
+            <option value="mejico">Mejico</option>
+            <option value="india">India</option>
+        </select><br />
+        <button id="validar-btn" class="ml-3 mt-2">Errezetak Erakutsi</button>
+        <button class="ml-3 mt-2">Errezeta berria</button>
+        <div id="recetas-container" class="mt-4"></div>
+    </div>
+    
+    <div id="new-recipe-form" class="border border-warning p-3 m-3 mt-4">
+        <h4>Errezeta Berria</h4>
+        <form id="recipe-form" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="recipe-name">Errezeta Izena</label>
+                <input type="text" class="form-control" id="recipe-name" placeholder="Idatzi errezeta izena" required />
+                <div class="invalid-feedback">Mesedez, idatzi errezeta izena.</div>
+            </div>
+            <div class="form-group">
+                <label for="recipe-description">Azalpena</label>
+                <input type="text" class="form-control" id="recipe-description" required />
+                <div class="invalid-feedback">Mesedez, idatzi azalpena.</div>
+            </div>
+            <div class="form-group">
+                <label for="recipe-image">Irudia</label>
+                <input type="text" class="form-control" id="recipe-image" required />
+                <div class="invalid-feedback">Mesedez, idatzi irudia.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Baieztatu</button>
+        </form>
+    </div>
+</body>
+</html>

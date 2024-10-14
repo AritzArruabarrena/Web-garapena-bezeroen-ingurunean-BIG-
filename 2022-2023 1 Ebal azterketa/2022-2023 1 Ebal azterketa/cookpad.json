@@ -1,0 +1,20 @@
+[
+  {"herrialdea":"India",
+   "errezetak": [
+     {"izena": "img/rajgira-paratha.png"},
+     {"izena": "img/farali-jeera.png"}
+    ]
+  },
+  {"herrialdea":"Mejico",
+    "errezetak": [
+      {"izena": "img/chilaquiles.png"},
+      {"izena":  "img/bistec.png"}
+    ]
+  },
+  {"herrialdea":"Italia",
+    "errezetak": [
+      {"izena":  "img/espaguetis.png"},
+      {"izena": "img/rollos.png"}
+    ]
+  }
+]
